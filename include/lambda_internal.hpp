@@ -98,7 +98,7 @@ namespace lambda {
                 lambda(other.copyLambda ? other.copyLambda(other.lambda) : nullptr),
                 deleteLambda(other.deleteLambda), copyLambda(other.copyLambda)
             {
-              receiveExecutor(other);
+              this->receiveExecutor(other);
             }
 
             template<typename T>
@@ -116,7 +116,7 @@ namespace lambda {
             Lambda<Out(In...)> &operator =(Lambda<Out(In...)> const &other)
             {
               this->lambda = other.copyLambda ? other.copyLambda(other.lambda) : nullptr;
-              receiveExecutor(other);
+              this->receiveExecutor(other);
               this->deleteLambda = other.deleteLambda;
               this->copyLambda = other.copyLambda;
               return *this;
