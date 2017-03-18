@@ -1,3 +1,6 @@
+#ifndef LAMBDA_INTERNAL_HPP
+#define LAMBDA_INTERNAL_HPP
+
 // Copied directly from https://www.codeproject.com/Articles/313312/Cplusplus-Lambda-Storage-Without-libcplusplus
 
 // Bug Fix
@@ -159,4 +162,6 @@ namespace lambda {
         };
     }
 }
+
+#endif // LAMBDA_INTERNAL_HPP
 
