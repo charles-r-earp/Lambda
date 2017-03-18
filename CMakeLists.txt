@@ -16,7 +16,7 @@ add_executable(example examples/example.cpp)
 
 target_link_libraries(example lambda)
 
-install(TARGETS lambda LIBRARY DESTINATION lib)
+install(TARGETS lambda LIBRARY DESTINATION lib/lambda)
 install(FILES include/lambda.hpp include/lambda_internal.hpp DESTINATION include/lambda)
 
 install(FILES lambda-config.cmake DESTINATION lib/cmake/lambda)
