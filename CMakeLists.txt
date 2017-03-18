@@ -9,6 +9,15 @@ if (CMAKE_VERSION VERSION_LESS "3.1")
     set (CMAKE_CXX_STANDARD 11)
 endif ()
 
-include_directories(include)
+add_library(lambda INTERFACE)
+target_include_directories(lambda INTERFACE include)
 
-add_subdirectory(examples)
+add_executable(example examples/example.cpp)
+
+target_link_libraries(example lambda)
+
+install(TARGETS lambda LIBRARY DESTINATION lib)
+install(FILES include/lambda.hpp include/lambda_internal.hpp DESTINATION include/lambda)
+
+install(FILES lambda-config.cmake DESTINATION lib/cmake/lambda)
+

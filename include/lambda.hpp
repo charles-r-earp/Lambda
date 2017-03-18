@@ -1,4 +1,4 @@
-#include "lambda_internal"
+#include "lambda_internal.hpp"
 
 namespace lambda {
 
