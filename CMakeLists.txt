@@ -10,14 +10,14 @@ if (CMAKE_VERSION VERSION_LESS "3.1")
 endif ()
 
 add_library(lambda INTERFACE)
-target_include_directories(lambda INTERFACE include)
+target_include_directories(lambda INTERFACE lambda/)
 
 add_executable(example examples/example.cpp)
 
 target_link_libraries(example lambda)
 
 install(TARGETS lambda LIBRARY DESTINATION lib)
-install(FILES include/lambda.hpp include/lambda_internal.hpp DESTINATION include/lambda)
+install(FILES lambda/lambda/lambda.hpp DESTINATION include/lambda)
 
 install(FILES lambda-config.cmake DESTINATION lib/cmake/lambda)
 

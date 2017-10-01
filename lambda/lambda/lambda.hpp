@@ -1,5 +1,5 @@
-#ifndef LAMBDA_INTERNAL_HPP
-#define LAMBDA_INTERNAL_HPP
+#ifndef LAMBDA_HPP
+#define LAMBDA_HPP
 
 // Copied directly from https://www.codeproject.com/Articles/313312/Cplusplus-Lambda-Storage-Without-libcplusplus
 
@@ -11,7 +11,7 @@
 
 namespace lambda {
 
-    namespace internal {
+    namespace {
     
         // Copied code:
 
@@ -161,7 +161,9 @@ namespace lambda {
             void *(*copyLambda)(void *);
         };
     }
+    
+    template<typename T> using lambda = Lambda<T>;
 }
 
-#endif // LAMBDA_INTERNAL_HPP
+#endif // LAMBDA_HPP
 
